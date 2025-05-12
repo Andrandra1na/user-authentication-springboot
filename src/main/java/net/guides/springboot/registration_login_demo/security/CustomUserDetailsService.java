@@ -15,9 +15,16 @@ import net.guides.springboot.registration_login_demo.repository.UserRepository;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+/**
+ * CustomUserDetailsService is a service that implements UserDetailsService
+ * to load user-specific data.
+ * It retrieves user information from the database and maps it to Spring Security's UserDetails.
+ */
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-
+    /**
+     * UserRepository is used to access user data from the database.
+     */
     private UserRepository userRepository;
 
     public CustomUserDetailsService(UserRepository userRepository) {
