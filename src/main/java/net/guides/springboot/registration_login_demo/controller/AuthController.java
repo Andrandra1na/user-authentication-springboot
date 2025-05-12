@@ -40,7 +40,6 @@ public class AuthController {
     }
 
     // handler method to handle user registration form submit request
-    @SuppressWarnings("null")
     @PostMapping("/register/save")
     public String registration(@Valid @ModelAttribute("user") UserDto userDto, 
                                 BindingResult result, Model model){
